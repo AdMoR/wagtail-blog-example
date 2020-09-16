@@ -4,19 +4,22 @@
 {% load wagtailcore_tags %}
 {% block content %}
 
-    <section class="bg-primary-3 text-light">
-      <div class="container mt-lg-6">
-        <div class="row">
-          <div class="col">
-            <h1 class="display-3">Get the best for your career.<br> In a few steps.</h1>
-            <div class="my-4">
-              <p class="lead">A guide for everyone, at any point in your career !</p>
-            </div>
 
+  <div class="bg-primary o-hidden">
+    <div class="container">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
+          <h1 class="display-3">Get the best for your career.<br> In a few steps.</h1>
+          <div class="my-4">
+            <p class="lead">A guide for everyone, at any point in your career !</p>
           </div>
         </div>
+        <div class="col-lg-6 text-center aos-init aos-animate" data-aos="fade-left">
+          <img src="{% static 'assets/img/saas-sketch-1.svg' %}" alt="Image" class="min-vw-60">
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
 
 
     <section>
@@ -44,6 +47,7 @@
 
         {% endfor %}
         </div>
+      </div>
     </section>
 
 
