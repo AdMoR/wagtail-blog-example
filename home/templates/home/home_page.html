@@ -58,10 +58,8 @@
             </div>
 
             <div class="col-md-6" data-aos="fade">
-              <h3 class="h3">{{ blog_category.title }}</h3>
-              <p class="lead">{{ blog_category.description | richtext }}</p>
               <ul class="list-unstyled mb-0">
-
+                <h5> Learn more about this topic </h5>
                 {% for post in blog_category.get_top_3  %}
                   <li class="d-flex py-2">
                     <div class="icon-round icon-round-xs bg-primary mr-2">
