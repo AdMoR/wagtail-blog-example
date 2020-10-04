@@ -61,6 +61,7 @@ class Author(models.Model):
 
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
+    description = RichTextField(blank=True, default="")
 
     feed_image = models.ForeignKey(
         'wagtailimages.Image',
@@ -74,12 +75,15 @@ class BlogIndexPage(Page):
         FieldPanel('intro', classname="full"),
     ]
     promote_panels = [
-        MultiFieldPanel(Page.promote_panels, "Comçmon page configuration"),
+        MultiFieldPanel(Page.promote_panels, "Common page configuration"),
         ImageChooserPanel('feed_image'),
     ]
 
     def get_posts(self):
         return self.get_children().specific()
+
+    def get_top_3(self):
+        return self.get_children().specific()[:3]
 
     def get_context(self, request, *args, **kwargs):
         context = super(BlogIndexPage, self).get_context(request, *args, **kwargs)

@@ -9580,6 +9580,9 @@ blockquote {
   .avatar.avatar-xlg {
     width: 7.5rem;
     height: 7.5rem; }
+  .avatar.avatar-sxlg {
+    width: 12.5rem;
+    height: 12.5rem; }
 
 @media (min-width: 992px) {
   .avatar.avatar-lg {
